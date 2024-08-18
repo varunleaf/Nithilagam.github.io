@@ -10,12 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet"> 
     <style>
         body {
-            font-family: 'Lora', serif; 
+            font-family: 'Lora', serif;
             margin: 0;
             padding: 0;
             color: #333;
             line-height: 1.6;
-            background-color: #f5f5f5;
         }
 
         .container {
@@ -24,40 +23,13 @@
             padding: 20px;
         }
 
-        /* Navigation Bar */
-        nav {
-            background-color: #333;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 15px 0;
-        }
-
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0 15px;
-            font-weight: 600;
-        }
-
-        nav a:hover {
-            color: #f5f5f5;
-        }
-
         header {
             text-align: center;
-            padding: 0;
-            margin-bottom: 50px; 
+            padding: 0; 
         }
 
         h1 {
-            font-family: 'Playfair Display', serif; 
+            font-family: 'Playfair Display', serif;
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 10px;
@@ -75,24 +47,6 @@
             margin-bottom: 20px;
         }
 
-        .highlights ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .highlights ul li {
-            margin-bottom: 10px;
-            padding: 10px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .highlights ul li:hover {
-            transform: scale(1.05);
-        }
-
         .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -104,87 +58,62 @@
             width: 100%;
             height: auto;
             border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .grid img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .rooms .room {
             margin-top: 30px;
             display: flex; 
             align-items: flex-start;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .rooms .room:hover {
-            transform: scale(1.02);
         }
 
         .rooms .room img {
-            width: 40%; 
+            width: 40%;
             margin-right: 20px;
-            border-radius: 10px;
         }
 
         .rooms .room .room-details {
-            width: 60%; 
+            width: 60%;
         }
 
         .contact {
             margin-top: 50px;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .button {
             display: inline-block;
-            background: linear-gradient(45deg, #007bff, #00d4ff); 
+            background-color: #333;
             color: white;
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
             margin-top: 20px;
             font-weight: 600;
-            transition: background 0.3s, transform 0.3s;
+            transition: background-color 0.3s; 
         }
 
         .button:hover {
-            background: linear-gradient(45deg, #0056b3, #00a3cc);
-            transform: scale(1.05);
+            background-color: #555;
         }
 
         .text-center {
             text-align: center;
         }
 
-        .hero { 
+        .hero {
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 100px 0; 
+            padding: 100px 0;
             text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_1.jpg');
-            border-radius: 10px;
         }
 
         .map-container {
             position: relative;
             width: 100%;
             height: 0;
-            padding-bottom: 56.25%; 
+            padding-bottom: 56.25%;
             overflow: hidden;
             margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .map-container iframe {
@@ -193,31 +122,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            border-radius: 10px;
-        }
-
-        .contact-form input[type="text"],
-        .contact-form input[type="email"],
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .contact-form button[type="submit"] {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .contact-form button[type="submit"]:hover {
-            background-color: #0056b3;
         }
 
         /* Table styling for a posh look */
@@ -226,20 +130,16 @@
             border-collapse: collapse;
             margin-top: 30px;
             font-family: 'Lora', serif;
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         th, td {
             padding: 15px;
             text-align: left;
-            border-bottom: 1px solid #eee; /* Light gray border */
+            border-bottom: 1px solid #eee;
         }
 
         th {
-            background-color: #f5f5f5; /* Light background for headers */
+            background-color: #f5f5f5;
             font-weight: bold;
         }
 
@@ -252,78 +152,121 @@
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="container">
-            <a href="#">Home</a>
-            <a href="#highlights">Highlights</a>
-            <a href="#rooms">Rooms</a>
-            <a href="#location">Location</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-
     <div class="container">
         <header>
-            <div class="hero"> 
+            <div class="hero" style="background-image: url('https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_1.jpg');"> 
                 <h1>Nithilagam Homestays</h1>
-                <p>Indulge in the serenity and refined comfort of Nithilagam Homestays, a haven of tranquility nestled amidst the breathtaking landscapes of India. Our exclusive retreat offers discerning travelers an escape from the hustle and bustle, where every detail has been thoughtfully curated to provide an unforgettable experience.</p>
+                <p>Indulge in the serenity and refined comfort of Nithilagam Homestays, a haven of tranquility nestled amidst the breathtaking landscapes of India. Our exclusive retreat offers discerning travelers an unforgettable escape, where personalized service and exquisite accommodations create an experience of unparalleled luxury.</p>
+                <a class="button" href="#">Explore Our Sanctuary</a>
             </div>
         </header>
 
-        <section class="highlights" id="highlights">
-            <h2 class="text-center">Why Choose Us</h2>
+        <section class="highlights">
+            <h2>Property Highlights</h2>
             <ul>
-                <li>Luxurious, spacious rooms with modern amenities</li>
-                <li>Scenic views of lush greenery and mountains</li>
-                <li>Exquisite homemade meals served fresh</li>
-                <li>Personalized service with attention to detail</li>
+                <li><strong>Free WiFi:</strong> Stay connected with our high-speed internet.</li>
+                <li><strong>Family Rooms:</strong> Spacious accommodations perfect for families.</li>
+                <li><strong>Free Parking:</strong> Convenient parking for all guests.</li>
+                <li><strong>Non-Smoking Rooms:</strong> Enjoy a clean, smoke-free environment.</li>
             </ul>
-        </section>
-
-        <section class="rooms" id="rooms">
-            <h2 class="text-center">Our Rooms</h2>
             <div class="grid">
-                <div class="room">
-                    <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_2.jpg" alt="Room 1">
-                    <div class="room-details">
-                        <h3>Deluxe Suite</h3>
-                        <p>Experience luxury in our Deluxe Suite with modern amenities, a private balcony, and stunning views of the surrounding nature.</p>
-                    </div>
-                </div>
-                <div class="room">
-                    <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_3.jpg" alt="Room 2">
-                    <div class="room-details">
-                        <h3>Executive Room</h3>
-                        <p>Stay in comfort in our Executive Room, designed for those who seek elegance and functionality during their stay.</p>
-                    </div>
-                </div>
-                <div class="room">
-                    <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_4.jpg" alt="Room 3">
-                    <div class="room-details">
-                        <h3>Family Room</h3>
-                        <p>Our spacious Family Room offers the perfect retreat for families, with enough space and amenities to ensure a comfortable stay.</p>
-                    </div>
-                </div>
+                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_1.jpg" alt="Property 1">
+                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_2.jpg" alt="Property 2">
+                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_3.jpg" alt="Property 3">
             </div>
         </section>
 
-        <section class="contact" id="contact">
-            <h2 class="text-center">Get in Touch</h2>
-            <div class="contact-form">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <textarea placeholder="Message"></textarea>
-                <button type="submit">Send</button>
+        <section class="rooms">
+            <h2>Exquisite Accommodations</h2>
+            <div class="room">
+                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_4.jpg" alt="Deluxe Double Room">
+                <div class="room-details">
+                    <h3>Deluxe Double Room with Balcony</h3>
+                    <p>Retreat to the comfort of our Deluxe Double Room, featuring a private balcony overlooking lush gardens. Impeccably designed with plush furnishings and modern amenities, this sanctuary offers a serene escape.</p>
+                    <ul>
+                        <li>Spacious 20 m² room</li>
+                        <li>Plush king-size bed</li>
+                        <li>Private balcony with garden views</li>
+                        <li>Luxurious en-suite bathroom</li>
+                        <li>Complimentary Wi-Fi</li>
+                    </ul>
+                    <a href="#" class="button">View Details</a>
+                </div>
             </div>
-        </section>
+            <div class="room">
+                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_5.jpg" alt="Family Room">
+                <div class="room-details">
+                    <h3>Family Room with Garden View</h3>
+                    <p>Create lasting memories with your loved ones in our spacious Family Room, offering breathtaking views of the surrounding gardens. Thoughtfully designed for comfort and relaxation, this haven provides ample space for everyone to unwind.</p>
+                    <ul>
+                        <li>Expansive 30 m² room</li>
+                        <li>Two plush queen-size beds</li>
+                        <li>Panoramic garden views</li>
+                        <li>Elegant en-suite bathroom</li>
+                        <li>Complimentary Wi-Fi</li>
+                    </ul>
+                    <a href="#" class="button">View Details</a>
+                </div>
+            </div>
+        </section>        
 
-        <section class="map-container" id="location">
+        <table> 
+            <caption>House Rules</caption>
+            <tr>
+                <th>Check-in</th>
+                <td>From 14:00 to 18:00</td>
+            </tr>
+            <tr>
+                <th>Check-out</th>
+                <td>From 08:00 to 11:00</td>
+            </tr>
+            <tr>
+                <th>Cancellation/ prepayment</th>
+                <td>Cancellation and prepayment policies vary according to accommodation type. Please enter the dates of your stay and check the conditions of your required option.</td>
+            </tr>
+            <tr>
+                <th>Children and beds</th>
+                <td>
+                    <ul>
+                        <li>Children of any age are welcome.</li>
+                        <li>Children 13 years and above will be charged as adults at this property.</li>
+                        <li>To see correct prices and occupancy information, please add the number of children in your group and their ages to your search.</li>
+                        <li>Cots and extra beds are not available at this property.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>No age restriction</th>
+                <td>There is no age requirement for check-in</td>
+            </tr>
+            <tr>
+                <th>Pets</th>
+                <td>Pets are not allowed.</td>
+            </tr>
+            <tr>
+                <td>Smoking is not allowed.</td>
+            </tr>
+            <tr>
+                <th>Parties</th>
+                <td>Parties/events are not allowed.</td>
+            </tr>
+            <tr>
+                <th>Quiet hours</th>
+                <td>Guests must be quiet between 23:00 and 07:00.</td>
+            </tr>
+        </table>
+
+        <div class="contact text-center">
+            <h2>Book Your Stay</h2>
+            <p>Ready to experience the tranquility and luxury of Nithilagam Homestays? Click the button below to book your stay.</p>
+            <a class="button" href="your-booking-link-here">Book Now</a>
+        </div>
+
+        <div class="map-container">
             <h2 class="text-center">Our Location</h2>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.0172023891784!2d79.78248717491046!3d16.003851837492167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4c2f5f1d75a1d5%3A0xa8f4b5b3b4ff2d2b!2sNithilagam%20Homestays!5e0!3m2!1sen!2sin!4v1602773809292!5m2!1sen!2sin" allowfullscreen></iframe>
-            </div>
-        </section>
+            <iframe src="https://www.google.com/maps?q=63MC+QW+Tiruvannamalai,+Tamil+Nadu&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
     </div>
 </body>
 </html>
