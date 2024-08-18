@@ -15,6 +15,7 @@
             padding: 0;
             color: #333;
             line-height: 1.6;
+            background-color: #f5f5f5;
         }
 
         .container {
@@ -23,9 +24,36 @@
             padding: 20px;
         }
 
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #f5f5f5;
+        }
+
         header {
             text-align: center;
-            padding: 0; 
+            padding: 0;
+            margin-bottom: 50px; 
         }
 
         h1 {
@@ -48,8 +76,21 @@
         }
 
         .highlights ul {
-            list-style: disc;
-            margin-left: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .highlights ul li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .highlights ul li:hover {
+            transform: scale(1.05);
         }
 
         .grid {
@@ -63,17 +104,33 @@
             width: 100%;
             height: auto;
             border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .rooms .room {
             margin-top: 30px;
             display: flex; 
             align-items: flex-start;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .rooms .room:hover {
+            transform: scale(1.02);
         }
 
         .rooms .room img {
             width: 40%; 
             margin-right: 20px;
+            border-radius: 10px;
         }
 
         .rooms .room .room-details {
@@ -82,22 +139,27 @@
 
         .contact {
             margin-top: 50px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .button {
             display: inline-block;
-            background-color: #333; 
+            background: linear-gradient(45deg, #007bff, #00d4ff); 
             color: white;
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
             margin-top: 20px;
             font-weight: 600;
-            transition: background-color 0.3s; 
+            transition: background 0.3s, transform 0.3s;
         }
 
         .button:hover {
-            background-color: #555; 
+            background: linear-gradient(45deg, #0056b3, #00a3cc);
+            transform: scale(1.05);
         }
 
         .text-center {
@@ -110,6 +172,8 @@
             color: white;
             padding: 100px 0; 
             text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_1.jpg');
+            border-radius: 10px;
         }
 
         .map-container {
@@ -119,6 +183,8 @@
             padding-bottom: 56.25%; 
             overflow: hidden;
             margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .map-container iframe {
@@ -127,9 +193,9 @@
             left: 0;
             width: 100%;
             height: 100%;
+            border-radius: 10px;
         }
 
-        /* Add styles for your contact form as needed */
         .contact-form input[type="text"],
         .contact-form input[type="email"],
         .contact-form textarea {
@@ -147,6 +213,11 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button[type="submit"]:hover {
+            background-color: #0056b3;
         }
 
         /* Table styling for a posh look */
@@ -155,6 +226,10 @@
             border-collapse: collapse;
             margin-top: 30px;
             font-family: 'Lora', serif;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         th, td {
@@ -177,139 +252,77 @@
     </style>
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <a href="#">Home</a>
+            <a href="#highlights">Highlights</a>
+            <a href="#rooms">Rooms</a>
+            <a href="#location">Location</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
     <div class="container">
         <header>
-            <div class="hero" style="background-image: url('https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_1.jpg');"> 
+            <div class="hero"> 
                 <h1>Nithilagam Homestays</h1>
-                <p>Indulge in the serenity and refined comfort of Nithilagam Homestays, a haven of tranquility nestled amidst the breathtaking landscapes of India. Our exclusive retreat offers discerning travelers an unforgettable escape, where personalized service and exquisite accommodations create an experience of unparalleled luxury.</p>
-                <a class="button" href="#">Explore Our Sanctuary</a>
+                <p>Indulge in the serenity and refined comfort of Nithilagam Homestays, a haven of tranquility nestled amidst the breathtaking landscapes of India. Our exclusive retreat offers discerning travelers an escape from the hustle and bustle, where every detail has been thoughtfully curated to provide an unforgettable experience.</p>
             </div>
         </header>
 
-        <section class="highlights">
-            <h2>Property Highlights</h2>
+        <section class="highlights" id="highlights">
+            <h2 class="text-center">Why Choose Us</h2>
             <ul>
-                <li><strong>Free WiFi:</strong> Stay connected with our high-speed internet.</li>
-                <li><strong>Family Rooms:</strong> Spacious accommodations perfect for families.</li>
-                <li><strong>Free Parking:</strong> Convenient parking for all guests.</li>
-                <li><strong>Non-Smoking Rooms:</strong> Enjoy a clean, smoke-free environment.</li>
+                <li>Luxurious, spacious rooms with modern amenities</li>
+                <li>Scenic views of lush greenery and mountains</li>
+                <li>Exquisite homemade meals served fresh</li>
+                <li>Personalized service with attention to detail</li>
             </ul>
+        </section>
+
+        <section class="rooms" id="rooms">
+            <h2 class="text-center">Our Rooms</h2>
             <div class="grid">
-                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_1.jpg" alt="Property 1">
-                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_2.jpg" alt="Property 2">
-                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_3.jpg" alt="Property 3">
+                <div class="room">
+                    <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_2.jpg" alt="Room 1">
+                    <div class="room-details">
+                        <h3>Deluxe Suite</h3>
+                        <p>Experience luxury in our Deluxe Suite with modern amenities, a private balcony, and stunning views of the surrounding nature.</p>
+                    </div>
+                </div>
+                <div class="room">
+                    <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_3.jpg" alt="Room 2">
+                    <div class="room-details">
+                        <h3>Executive Room</h3>
+                        <p>Stay in comfort in our Executive Room, designed for those who seek elegance and functionality during their stay.</p>
+                    </div>
+                </div>
+                <div class="room">
+                    <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_4.jpg" alt="Room 3">
+                    <div class="room-details">
+                        <h3>Family Room</h3>
+                        <p>Our spacious Family Room offers the perfect retreat for families, with enough space and amenities to ensure a comfortable stay.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="rooms">
-            <h2>Exquisite Accommodations</h2>
-            <div class="room">
-                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_4.jpg" alt="Deluxe Double Room">
-                <div class="room-details">
-                    <h3>Deluxe Double Room with Balcony</h3>
-                    <p>Retreat to the comfort of our Deluxe Double Room, featuring a private balcony overlooking lush gardens. Impeccably designed with plush furnishings and modern amenities, this sanctuary offers a serene escape.</p>
-                    <ul>
-                        <li>Spacious 20 m² room</li>
-                        <li>Plush king-size bed</li>
-                        <li>Private balcony with garden views</li>
-                        <li>Luxurious en-suite bathroom</li>
-                        <li>Complimentary Wi-Fi</li>
-                    </ul>
-                    <a href="#" class="button">View Details</a>
-                </div>
-            </div>
-            <div class="room">
-                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_5.jpg" alt="Family Room">
-                <div class="room-details">
-                    <h3>Family Room with Garden View</h3>
-                    <p>Create lasting memories with your loved ones in our spacious Family Room, offering breathtaking views of the surrounding gardens. Thoughtfully designed for comfort and relaxation, this haven provides ample space for everyone to unwind.</p>
-                    <ul>
-                        <li>Expansive 30 m² room</li>
-                        <li>Two plush queen-size beds</li>
-                        <li>Panoramic garden views</li>
-                        <li>Elegant en-suite bathroom</li>
-                        <li>Complimentary Wi-Fi</li>
-                    </ul>
-                    <a href="#" class="button">View Details</a>
-                </div>
-            </div>
-        </section>        
-
-        <table> 
-            <caption>House Rules</caption>
-            <tr>
-                <th>Check-in</th>
-                <td>From 14:00 to 18:00</td>
-            </tr>
-            <tr>
-                <th>Check-out</th>
-                <td>From 08:00 to 11:00</td>
-            </tr>
-            <tr>
-                <th>Cancellation/ prepayment</th>
-                <td>Cancellation and prepayment policies vary according to accommodation type. Please enter the dates of your stay and check the conditions of your required option.</td>
-            </tr>
-            <tr>
-                <th>Children and beds</th>
-                <td>
-                    <ul>
-                        <li>Children of any age are welcome.</li>
-                        <li>Children 13 years and above will be charged as adults at this property.</li>
-                        <li>To see correct prices and occupancy information, please add the number of children in your group and their ages to your search.</li>
-                        <li>Cots and extra beds are not available at this property.</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <th>No age restriction</th>
-                <td>There is no age requirement for check-in</td>
-            </tr>
-            <tr>
-                <th>Pets</th>
-                <td>Pets are not allowed.</td>
-            </tr>
-            <tr>
-                <th>Smoking</th>
-                <td>Smoking is not allowed.</td>
-            </tr>
-            <tr>
-                <th>Parties</th>
-                <td>Parties/events are not allowed</td>
-            </tr>
-        </table>
-
-
-        <section class="location">
-            <h2>Location</h2>
-            <p>Nithilagam Homestays is ideally situated, offering easy access to popular attractions and essential amenities.</p>
-            <p><strong>Address:</strong> 173/48, Kosamadam Street, Mathalangulam, Tiruvannamalai, Tamil Nadu 606601</p>
-            <p><strong>Nearby Attractions:</strong> Arunachaleswara Temple, Ramana Ashram, Girivalam Path</p>
-
-            <div class="map-container"> 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15549.30337654843!2d79.695197!3d12.652859!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad47e1d91d2147%3A0x732b7a45579aa6c4!2sNithilagam%20Homestays!5e0!3m2!1sen!2sin!4v1692336726240!5m2!1sen!2sin"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <section class="contact" id="contact">
+            <h2 class="text-center">Get in Touch</h2>
+            <div class="contact-form">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Message"></textarea>
+                <button type="submit">Send</button>
             </div>
         </section>
 
-        <div class="text-center">
-            <a class="button" href="https://www.booking.com/hotel/in/nithilagam-homestays.en-gb.html?aid=357026&label=gog235jc-1DCAsobEIUbml0aGlsYWdhbS1ob21lc3RheXNIM1gDaGyIAQGYAQm4ARnIAQzYAQPoAQGIAgGoAgO4AoSlzbUGwAIB0gIkMWEwMzQ0ZTYtZGQ0Yi00NTk5LTg4YTQtNGFmNjhlMDExNzlh2AIE4AIB&sid=997238d86b717439c4dde2d575070886&dist=0&keep_landing=1&sb_price_type=total&type=total&">
-                Book Now
-            </a>
-        </div>
-
-        <section class="contact">
-            <h2>Contact Us</h2>
-            <p>For any inquiries or further information, please contact us:</p>
-            
-            <form class="contact-form" action="[Your form submission URL]" method="post"> 
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-
-            <p><strong>Phone:</strong> +91 [Insert Phone Number Here]</p> 
-            <p><strong>Email:</strong> [Insert Email Address Here]</p>
+        <section class="map-container" id="location">
+            <h2 class="text-center">Our Location</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.0172023891784!2d79.78248717491046!3d16.003851837492167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4c2f5f1d75a1d5%3A0xa8f4b5b3b4ff2d2b!2sNithilagam%20Homestays!5e0!3m2!1sen!2sin!4v1602773809292!5m2!1sen!2sin" allowfullscreen></iframe>
+            </div>
         </section>
     </div>
 </body>
