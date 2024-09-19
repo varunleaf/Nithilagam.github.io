@@ -201,6 +201,18 @@
                 width: 100%;
             }
         }
+
+        /* Compact Images */
+        .compact-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .compact-images img {
+            width: 100%;
+            border-radius: 10px;
+        }
     </style>
 </head>
 
@@ -251,11 +263,13 @@
 
             <!-- Single Room with Double Cot -->
             <div class="room">
-                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_7.jpg" alt="Single Room with Double Cot" loading="lazy">
-                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_8.jpg" alt="Single Room with Double Cot - View 2" loading="lazy">
+                <div class="compact-images">
+                    <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_7.jpg" alt="Single Room with Double Cot" loading="lazy">
+                    <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_8.jpg" alt="View from Single Room with Double Cot" loading="lazy">
+                </div>
                 <div class="room-details">
                     <h3>Single Room with Double Cot</h3>
-                    <p>Perfect for solo travelers or couples, this cozy room offers a peaceful environment with a mountain-view balcony.</p>
+                    <p>This cozy room is perfect for 1 to 2 guests, offering a peaceful retreat with a balcony overlooking the mountains. Simple yet comfortable, it provides all essential amenities for a pleasant stay.</p>
                     <ul>
                         <li>Capacity: 1-2 members</li>
                         <li>Non-air-conditioned room with a double cot</li>
