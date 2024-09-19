@@ -63,7 +63,6 @@
             width: 100%;
             height: auto;
             border-radius: 10px;
-            /* Lazy Loading for faster load times */
             loading: lazy;
         }
 
@@ -72,14 +71,12 @@
             display: flex;
             align-items: flex-start;
             flex-wrap: wrap;
-            /* Flex-wrap for better responsive behavior */
         }
 
         .rooms .room img {
             width: 40%;
             margin-right: 20px;
             border-radius: 10px;
-            /* Lazy Loading */
             loading: lazy;
         }
 
@@ -212,7 +209,7 @@
         <header>
             <div class="hero" style="background-image: url('https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_1.jpg');">
                 <h1>Nithilagam Homestays</h1>
-                <p>Indulge in the serenity and refined comfort of Nithilagam Homestays, a haven of tranquility nestled amidst the breathtaking landscapes of India.</p>
+                <p>Indulge in the serenity and refined comfort of Nithilagam Homestays, a haven of tranquility nestled amidst the breathtaking landscapes of India. Our exclusive retreat offers discerning travelers an unforgettable escape, where personalized service and exquisite accommodations create an experience of unparalleled luxury.</p>
                 <a class="button" href="https://www.booking.com/hotel/in/nithilagam-homestays.en-gb.html">Explore Our Sanctuary</a>
             </div>
         </header>
@@ -234,85 +231,108 @@
 
         <section class="rooms">
             <h2>Exquisite Accommodations</h2>
+
+            <!-- Deluxe Family Suite -->
             <div class="room">
-                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_7.jpg" alt="Single Room with Balcony" loading="lazy">
-                <div class="room-details">
-                    <h3>Single Room with Balcony</h3>
-                    <p>Perfect for a solo traveler or couple, this cozy room offers comfort with a scenic mountain view from the balcony.</p>
-                    <ul>
-                        <li>Non-AC</li>
-                        <li>Balcony with mountain view</li>
-                        <li>Attached bathroom with Indian toilet</li>
-                        <li>Heating rod available</li>
-                    </ul>
-                    <a href="https://www.booking.com/hotel/in/nithilagam-homestays.en-gb.html" class="button">View Details</a>
-                </div>
-            </div>
-            <div class="room">
-                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_8.jpg" alt="Deluxe Family Suite" loading="lazy">
+                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_4.jpg" alt="Deluxe Family Suite" loading="lazy">
                 <div class="room-details">
                     <h3>Deluxe Family Suite</h3>
-                    <p>A spacious family suite with all amenities for a comfortable stay.</p>
+                    <p>This spacious suite is perfect for families, offering comfortable accommodation for 2 to 6 people. With a living room, dedicated workspace, and a fully equipped kitchen, it's ideal for a longer stay.</p>
                     <ul>
-                        <li>2-6 members capacity</li>
-                        <li>Air-conditioned bedroom with king bed</li>
-                        <li>Living room, kitchen, and balcony</li>
-                        <li>Western and Indian-style toilets</li>
+                        <li>Capacity: 2-6 members</li>
+                        <li>Living room with double cot, sofa, workspace, and balcony</li>
+                        <li>Kitchen with induction stove, saucepan, kettle, toaster, dining table</li>
+                        <li>Air-conditioned bedroom with a king bed</li>
+                        <li>Bathroom with Western toilet and geyser, plus an additional Indian toilet</li>
+                    </ul>
+                    <a href="https://www.booking.com/hotel/in/nithilagam-homestays.en-gb.html" class="button">View Details</a>
+                </div>
+            </div>
+
+            <!-- Single Room with Double Cot -->
+            <div class="room">
+                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_7.jpg" alt="Single Room with Double Cot" loading="lazy">
+                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_8.jpg" alt="Single Room with Double Cot - View 2" loading="lazy">
+                <div class="room-details">
+                    <h3>Single Room with Double Cot</h3>
+                    <p>Perfect for solo travelers or couples, this cozy room offers a peaceful environment with a mountain-view balcony.</p>
+                    <ul>
+                        <li>Capacity: 1-2 members</li>
+                        <li>Non-air-conditioned room with a double cot</li>
+                        <li>Balcony with a mountain view</li>
+                        <li>Attached bathroom with Indian toilet and heating rod</li>
                     </ul>
                     <a href="https://www.booking.com/hotel/in/nithilagam-homestays.en-gb.html" class="button">View Details</a>
                 </div>
             </div>
         </section>
 
-        <section class="contact">
-            <h2 class="text-center">Visit Us</h2>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1mqdzn1!1m12!1m3!1d3890.8298621578966!2d79.0644056744668!3d12.225295592378045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad45efb91677ed%3A0x2a07d0fa64fdc919!2sNithilagam%20Homestays%2C%20Tiruvannamalai%2C%20Tamil%20Nadu%20606303!5e0!3m2!1sen!2sin!4v1694571534686!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <p class="text-center">63MC+QW Tiruvannamalai, Tamil Nadu</p>
-        </section>
-
-        <section class="house-rules">
-            <h2 class="text-center">House Rules</h2>
+        <section class="rules">
+            <h2>House Rules</h2>
             <table>
                 <caption>House Rules</caption>
-                <tr>
-                    <th>Check-in</th>
-                    <td>From 14:00</td>
-                </tr>
-                <tr>
-                    <th>Check-out</th>
-                    <td>Until 11:00</td>
-                </tr>
-                <tr>
-                    <th>Cancellation/Prepayment</th>
-                    <td>Cancellation and prepayment policies vary according to accommodation type. Please enter the dates of your stay and check the conditions of your required room.</td>
-                </tr>
-                <tr>
-                    <th>Children and beds</th>
-                    <td>Children of any age are welcome. Cots and extra beds are available upon request.</td>
-                </tr>
-                <tr>
-                    <th>Age restriction</th>
-                    <td>There is no age requirement for check-in.</td>
-                </tr>
-                <tr>
-                    <th>Pets</th>
-                    <td>Pets are not allowed.</td>
-                </tr>
-                <tr>
-                    <th>Smoking</th>
-                    <td>Smoking is not allowed.</td>
-                </tr>
-                <tr>
-                    <th>Parties</th>
-                    <td>Parties/events are not allowed.</td>
-                </tr>
-                <tr>
-                    <th>Quiet hours</th>
-                    <td>Guests must be quiet between 23:00 and 07:00.</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>No parking</td>
+                        <td>Street parking only</td>
+                    </tr>
+                    <tr>
+                        <td>Mosquito proof</td>
+                        <td>Yes, property is equipped</td>
+                    </tr>
+                    <tr>
+                        <td>R.O. water</td>
+                        <td>5L provided per day</td>
+                    </tr>
+                    <tr>
+                        <td>Check-in</td>
+                        <td>From 14:00</td>
+                    </tr>
+                    <tr>
+                        <td>Check-out</td>
+                        <td>Until 11:00</td>
+                    </tr>
+                    <tr>
+                        <td>Cancellation/Prepayment</td>
+                        <td>Policies vary according to accommodation type</td>
+                    </tr>
+                    <tr>
+                        <td>Children and beds</td>
+                        <td>Children of any age are welcome, cots and extra beds available on request</td>
+                    </tr>
+                    <tr>
+                        <td>Age restriction</td>
+                        <td>No age requirement for check-in</td>
+                    </tr>
+                    <tr>
+                        <td>Pets</td>
+                        <td>Not allowed</td>
+                    </tr>
+                    <tr>
+                        <td>Smoking</td>
+                        <td>Not allowed</td>
+                    </tr>
+                    <tr>
+                        <td>Parties</td>
+                        <td>Not allowed</td>
+                    </tr>
+                    <tr>
+                        <td>Quiet hours</td>
+                        <td>Guests must be quiet between 23:00 and 07:00</td>
+                    </tr>
+                </tbody>
             </table>
+        </section>
+
+        <section class="map-container">
+            <h2>Find Us</h2>
+            <iframe src="https://www.google.com/maps?q=63MC+QW+Tiruvannamalai,+Tamil+Nadu&output=embed" frameborder="0" allowfullscreen></iframe>
         </section>
     </div>
 </body>
