@@ -9,21 +9,11 @@
     <!-- Optimized Google Fonts Link -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #4E9F3D;
-            --secondary-color: #F2F5EA;
-            --accent-color: #333;
-            --light-gray: #f5f5f5;
-            --dark-gray: #777;
-            --transition-speed: 0.3s;
-        }
-
         body {
             font-family: 'Lora', serif;
             margin: 0;
             padding: 0;
-            background-color: var(--secondary-color);
-            color: var(--accent-color);
+            color: #333;
             line-height: 1.6;
         }
 
@@ -42,14 +32,12 @@
             font-family: 'Playfair Display', serif;
             font-size: 3rem;
             font-weight: 700;
-            color: var(--primary-color);
             margin-bottom: 10px;
         }
 
         p {
             font-size: 1.2rem;
-            line-height: 1.8;
-            color: var(--dark-gray);
+            line-height: 1.6;
         }
 
         h2 {
@@ -57,26 +45,11 @@
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 20px;
-            color: var(--primary-color);
         }
 
         .highlights ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .highlights li {
-            background: var(--primary-color);
-            color: white;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: transform var(--transition-speed);
-        }
-
-        .highlights li:hover {
-            transform: scale(1.05);
+            list-style: disc;
+            margin-left: 20px;
         }
 
         .grid {
@@ -90,35 +63,21 @@
             width: 100%;
             height: auto;
             border-radius: 10px;
-            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-        }
-
-        .grid img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            loading: lazy;
         }
 
         .rooms .room {
-            margin-top: 50px;
+            margin-top: 30px;
             display: flex;
             align-items: flex-start;
             flex-wrap: wrap;
-            background: var(--light-gray);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .rooms .room img {
             width: 40%;
             margin-right: 20px;
             border-radius: 10px;
-            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-        }
-
-        .rooms .room img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            loading: lazy;
         }
 
         .rooms .room .room-details {
@@ -127,27 +86,22 @@
 
         .contact {
             margin-top: 50px;
-            padding: 20px;
-            background: var(--light-gray);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .button {
             display: inline-block;
-            background-color: var(--primary-color);
+            background-color: #333;
             color: white;
-            padding: 10px 30px;
+            padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
             margin-top: 20px;
             font-weight: 600;
-            transition: background-color var(--transition-speed), transform var(--transition-speed);
+            transition: background-color 0.3s;
         }
 
         .button:hover {
-            background-color: #388e3c;
-            transform: scale(1.05);
+            background-color: #555;
         }
 
         .text-center {
@@ -160,25 +114,6 @@
             color: white;
             padding: 100px 0;
             text-align: center;
-            position: relative;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: 0;
-        }
-
-        .hero h1,
-        .hero p,
-        .hero a {
-            position: relative;
-            z-index: 1;
         }
 
         .map-container {
@@ -203,26 +138,19 @@
         .contact-form input[type="email"],
         .contact-form textarea {
             width: 100%;
-            padding: 15px;
+            padding: 10px;
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .contact-form button[type="submit"] {
-            background-color: var(--primary-color);
+            background-color: #007bff;
             color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color var(--transition-speed), transform var(--transition-speed);
-        }
-
-        .contact-form button[type="submit"]:hover {
-            background-color: #388e3c;
-            transform: scale(1.05);
         }
 
         /* Table styling */
@@ -241,8 +169,7 @@
         }
 
         th {
-            background-color: var(--primary-color);
-            color: white;
+            background-color: #f5f5f5;
             font-weight: bold;
         }
 
@@ -251,7 +178,6 @@
             font-weight: bold;
             margin-bottom: 10px;
             text-align: center;
-            color: var(--primary-color);
         }
 
         /* Responsive Design Enhancements */
@@ -283,44 +209,52 @@
         <header>
             <div class="hero" style="background-image: url('https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_1.jpg');">
                 <h1>Nithilagam Homestays</h1>
-                <p>Indulge in the serenity and refined comfort of Nithilagam Homestays, a haven of tranquility nestled amidst the breathtaking landscapes of India.</p>
-                <a class="button" href="https://www.airbnb.co.in/rooms/1183996857070601185?locale=en&_set_bev_on_new_domain=1729102076_EAMTMwZTE2MmVjMW&source_impression_id=p3_1729102114_P3C9B2oW1tT9l3I_">Book Now</a>
+                <p>Indulge in the serenity and refined comfort of Nithilagam Homestays, a haven of tranquility nestled amidst the breathtaking landscapes of India. Our exclusive retreat offers discerning travelers an unforgettable escape, where personalized service and exquisite accommodations create an experience of unparalleled luxury.</p>
+                <a class="button" href="https://www.airbnb.co.in/rooms/1183996857070601185?locale=en&_set_bev_on_new_domain=1729102076_EAMTMwZTE2MmVjMW&source_impression_id=p3_1729102114_P3C9B2oW1tT9l3I_">Explore Our Sanctuary</a>
             </div>
         </header>
 
         <section class="highlights">
-            <h2 class="text-center">Why Choose Us?</h2>
+            <h2>Property Highlights</h2>
             <ul>
-                <li>Spacious rooms with modern amenities</li>
-                <li>Stunning mountain views</li>
-                <li>Quiet, peaceful environment</li>
-                <li>Fully equipped kitchen for self-catering</li>
-                <li>Proximity to local attractions</li>
+                <li><strong>Free WiFi:</strong> Stay connected with our high-speed internet.</li>
+                <li><strong>Family Rooms:</strong> Spacious accommodations perfect for families.</li>
+                <li><strong>Free Parking:</strong> Convenient parking for all guests.</li>
+                <li><strong>Non-Smoking Rooms:</strong> Enjoy a clean, smoke-free environment.</li>
             </ul>
+            <div class="grid">
+                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_1.jpg" alt="Beautiful exterior view of Nithilagam Homestays" loading="lazy">
+                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_2.jpg" alt="Luxurious interior of the homestay" loading="lazy">
+                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_3.jpg" alt="Serene garden area at Nithilagam Homestays" loading="lazy">
+            </div>
         </section>
 
         <section class="rooms">
-            <h2>Our Rooms</h2>
+            <h2>Exquisite Accommodations</h2>
 
+            <!-- Deluxe Family Suite -->
             <div class="room">
-                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_7.jpg" alt="Deluxe Family Suite">
+                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_4.jpg" alt="Deluxe Family Suite" loading="lazy">
                 <div class="room-details">
                     <h3>Deluxe Family Suite</h3>
-                    <p>A perfect retreat for families, this suite offers a spacious living area, balcony, and kitchen facilities for a comfortable stay.</p>
+                    <p>This spacious suite is perfect for families, offering comfortable accommodation for 2 to 6 people. With a living room, dedicated workspace, and a fully equipped kitchen, it's ideal for a longer stay.</p>
                     <ul>
                         <li>Capacity: 2-6 members</li>
-                        <li>Living room with a double cot, sofa, and workspace</li>
-                        <li>Kitchen with induction stove, electric kettle, and more</li>
+                        <li>Living room with double cot, sofa, workspace, and balcony</li>
+                        <li>Kitchen with induction stove, saucepan, kettle, toaster, dining table</li>
+                        <li>Air-conditioned bedroom with a king bed</li>
+                        <li>Bathroom with Western toilet and geyser, plus an additional Indian toilet</li>
                     </ul>
                     <a href="https://www.airbnb.co.in/rooms/1183996857070601185?locale=en&_set_bev_on_new_domain=1729102076_EAMTMwZTE2MmVjMW&source_impression_id=p3_1729102114_P3C9B2oW1tT9l3I_" class="button">View Details</a>
                 </div>
             </div>
 
+            <!-- Single Room with Double Cot -->
             <div class="room">
-                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_8.jpg" alt="Single Room with Double Cot">
+                <img src="https://raw.githubusercontent.com/varunleaf/Nithilagam.github.io/main/public/images/image_5.jpg" alt="Single Room with Double Cot" loading="lazy">
                 <div class="room-details">
                     <h3>Single Room with Double Cot</h3>
-                    <p>Cozy and comfortable, this room is ideal for couples or solo travelers, with a scenic balcony view.</p>
+                    <p>Perfect for solo travelers or couples, this cozy room offers a relaxing stay with a balcony providing stunning mountain views.</p>
                     <ul>
                         <li>Capacity: 1-2 members</li>
                         <li>Non-air-conditioned, with a balcony and mountain view</li>
